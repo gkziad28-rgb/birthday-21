@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>مين تم الـ 21؟ 🎂</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Tahoma,"Arial",sans-serif;background:#180d24;color:#fff}body{overflow-x:hidden}
+.page{min-height:100vh;display:none;position:relative;overflow:hidden;padding:28px 18px 44px}.page.active{display:flex;align-items:center;justify-content:center;animation:pageIn .8s ease both}
+.bg{position:absolute;inset:0;background:radial-gradient(circle at 20% 15%,#ff9fcf55 0 7%,transparent 20%),radial-gradient(circle at 85% 20%,#ffd76a44 0 6%,transparent 18%),linear-gradient(135deg,#160c26,#4c1649 48%,#160c26)}
+.bg:after{content:"";position:absolute;inset:-30%;background:radial-gradient(circle,#fff8 0 2px,transparent 3px);background-size:90px 90px;animation:drift 18s linear infinite;opacity:.45}
+.card{position:relative;z-index:2;width:min(92vw,460px);padding:34px 24px;border:1px solid #ffffff35;border-radius:30px;background:#ffffff12;backdrop-filter:blur(16px);box-shadow:0 25px 80px #0008;text-align:center}
+h1{font-size:clamp(34px,9vw,56px);margin:8px 0 12px;color:#ffe7f4;text-shadow:0 0 22px #ff77bd99}.sub{color:#ffd8eb;margin-bottom:22px;font-size:15px}.cake{font-size:70px;animation:bob 2.2s ease-in-out infinite;display:block}
+input{width:100%;border:1px solid #fff6;border-radius:16px;background:#fff;color:#39152d;padding:16px;text-align:center;font-size:18px;outline:0}button{border:0;border-radius:999px;padding:14px 28px;margin-top:15px;font-size:18px;font-weight:800;cursor:pointer;color:#fff;background:linear-gradient(135deg,#ff4e9b,#a82f89);box-shadow:0 12px 28px #ff4e9b55;transition:.2s}button:active{transform:scale(.96)}#err{height:22px;color:#ffd0dd;margin-top:9px;font-size:13px}
+.photo-card{position:relative;z-index:2;width:min(92vw,480px);text-align:center}.hero-photo{width:100%;max-height:68vh;object-fit:cover;border-radius:28px;border:4px solid #fff8;box-shadow:0 25px 80px #0009;animation:photoIn 1s ease both}.hello{font-size:28px;margin:17px 0 2px;color:#ffe6f2}.gallery-btn{min-width:190px}
+.gallery{position:relative;z-index:2;width:min(94vw,850px);text-align:center}.gallery h2{font-size:clamp(29px,7vw,48px);margin:0 0 22px;color:#ffe5f1;text-shadow:0 0 18px #ff66b277}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.grid img{width:100%;height:260px;object-fit:cover;border-radius:20px;border:2px solid #fff5;box-shadow:0 10px 35px #0007;transition:.3s;cursor:pointer}.grid img:hover{transform:translateY(-4px) scale(1.01)}
+.end{position:relative;z-index:2;width:min(92vw,700px);text-align:center}.end .ring{width:min(82vw,500px);aspect-ratio:1;border-radius:50%;margin:auto;display:flex;align-items:center;justify-content:center;background:#ffffff0b;border:2px solid #ffd2e6aa;box-shadow:0 0 90px #ff65ae33,inset 0 0 70px #ff65ae22;animation:glow 2.5s ease-in-out infinite}.end h2{font-size:clamp(31px,7vw,58px);line-height:1.5;color:#ffe8f3;margin:20px}.small{color:#ffd0e4;font-size:16px}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:5;overflow:hidden}.confetti i{position:absolute;top:-20px;width:8px;height:14px;border-radius:3px;background:#ff82ba;animation:fall linear infinite}.confetti i:nth-child(2n){background:#ffd56a}.confetti i:nth-child(3n){background:#fff}.confetti i:nth-child(4n){background:#a98cff}
+.lightbox{display:none;position:fixed;inset:0;z-index:20;background:#08050dcc;align-items:center;justify-content:center;padding:20px}.lightbox.show{display:flex}.lightbox img{max-width:94vw;max-height:90vh;border-radius:18px}.close{position:absolute;top:18px;right:18px;margin:0;width:46px;height:46px;padding:0;background:#fff2;font-size:26px}
+@keyframes pageIn{from{opacity:0;transform:translateY(25px) scale(.98)}to{opacity:1;transform:none}}@keyframes photoIn{from{opacity:0;transform:scale(.9) rotate(-2deg)}to{opacity:1;transform:none}}@keyframes bob{50%{transform:translateY(-9px) rotate(2deg)}}@keyframes drift{to{transform:translate(90px,90px)}}@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}@keyframes glow{50%{box-shadow:0 0 120px #ff65ae55,inset 0 0 90px #ff65ae33}}
+@media(max-width:560px){.page{padding:20px 12px 30px}.grid{grid-template-columns:repeat(2,1fr);gap:9px}.grid img{height:210px}.hero-photo{max-height:62vh}.card{padding:28px 19px}.end .ring{width:86vw}}
+</style></head>
+<body>
+<div class="confetti" id="confetti"></div>
+<section class="page active" id="p1"><div class="bg"></div><div class="card"><span class="cake">🎂</span><div class="sub">مفاجأة صغيرة لشخص مميز جدًا ✨</div><h1>مين تم الـ 21؟</h1><input id="pass" type="password" placeholder="اكتبي كلمة السر" autocomplete="off"><button onclick="login()">دخول ❤️</button><div id="err"></div><div class="small">( الباسورد: انا )</div></div></section>
+<section class="page" id="p2"><div class="bg"></div><div class="photo-card"><img class="hero-photo" src="assets/cover.jpg" alt="صورة عيد الميلاد"><div class="hello">🎀 كل سنة وانتي طيبة 🎀</div><button class="gallery-btn" onclick="showPage('p3')">المعرض ✨</button></div></section>
+<section class="page" id="p3"><div class="bg"></div><div class="gallery"><h2>كل سنه وانتي طيبه يا قمرررر ❤️</h2><div class="grid"><img src="assets/photo1.jpg" onclick="openImg(this.src)"><img src="assets/photo2.jpg" onclick="openImg(this.src)"><img src="assets/photo3.jpg" onclick="openImg(this.src)"><img src="assets/photo4.jpg" onclick="openImg(this.src)"><img src="assets/photo5.jpg" onclick="openImg(this.src)"><img src="assets/photo6.jpg" onclick="openImg(this.src)"><img src="assets/photo7.jpg" onclick="openImg(this.src)"></div><button onclick="showPage('p4')">كملي المفاجأة 💕</button></div></section>
+<section class="page" id="p4"><div class="bg"></div><div class="end"><div class="ring"><h2>عقبال عمر طويل<br>وذكريات أحلى وأحلى ❤️</h2></div><p class="small">🎂 21 سنة من الحكايات... ولسه الأجمل جاي 🎉</p></div></section>
+<div class="lightbox" id="lb" onclick="this.classList.remove('show')"><button class="close">×</button><img id="lbimg"></div>
+<script>
+const pages=['p1','p2','p3','p4'];
+function showPage(id){pages.forEach(p=>document.getElementById(p).classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);burst()}
+function login(){const v=document.getElementById('pass').value.trim();if(v==='انا'||v==='أنا')showPage('p2');else{document.getElementById('err').textContent='الباسورد مش صح 😜 جربي تاني';document.getElementById('pass').value='';}}
+document.getElementById('pass').addEventListener('keydown',e=>{if(e.key==='Enter')login()});
+function openImg(src){document.getElementById('lbimg').src=src;document.getElementById('lb').classList.add('show')}
+function burst(){for(let i=0;i<28;i++){const s=document.createElement('i');s.style.left=Math.random()*100+'%';s.style.animationDuration=(3+Math.random()*4)+'s';s.style.animationDelay=Math.random()*1.5+'s';document.getElementById('confetti').appendChild(s);setTimeout(()=>s.remove(),8000)}}burst();
+</script></body></html>
